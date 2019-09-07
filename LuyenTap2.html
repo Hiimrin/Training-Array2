@@ -29,14 +29,62 @@
         document.write(arr);
 
  */
-// bai 3
+/* bai 3
 
     let arr = new Array();
         arr = 'Co bao nhieu ki tu';
         count = arr.length;
         document.write(arr + "<br>");
         document.write("Số ký tự: "+count);
-
+        */
+    /* Bai 4
+    let count = 0;
+    let n = prompt("Enter length of array :");
+    let arr = new Array();
+    for (let i = 0; i < n; i++) {
+        arr[i] = prompt("Enter value of array :");
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (isNaN(arr[i]) === true) {
+            count++;
+        }
+    }
+    alert(count);
+    */
+/* Bai 5
+ let n = prompt("Nhap chieu dai mang:");
+    let i, j;
+    let arr1 = new Array();
+    let arr2 = new Array();
+    for (i = 0; i < n; i++) {
+        arr1[i] = prompt("nhap phan tu mang 1 :");
+    }
+    for (j = 0; j < n; j++) {
+        arr2[j] = prompt("nhap phan tu mang 2 :");
+    }
+    let x = (JSON.stringify(arr1) == JSON.stringify(arr2));
+    if (x.valueOf() === true) {
+        alert("2 arrays co chung phan tu!");
+    } else alert("Khong co phan tu giong nhau !");
+    */
+    
+    
+    /* bai 6
+    function Search() {
+        const num = window.prompt();
+        const str = num.toString();
+        const result = [str[0]];
+        for (let x = 1; x < str.length; x++) {
+            if ((str[x] === " ")) {
+                result.push('_', str[x]);
+                result.splice(x+1,1);
+            } else {
+                result.push(str[x]);
+            }
+        }
+        console.log(result.join(""));
+    }
+    Search();
 </script>
 </body>
 </html>
